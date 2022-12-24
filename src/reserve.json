@@ -1,0 +1,115 @@
+{
+	"area": {
+		"areatype": [
+			{ "id": 24, "name": "Subbrandcompartiment", "shortname": "SBC" },
+			{ "id": 23, "name": "Doorgang", "shortname": "Doorgang" },
+			{ "id": 26, "name": "Trappenruimte", "shortname": "Trap" },
+			{ "id": 25, "name": "Veilige omgeving", "shortname": "Exit" }
+		],
+		"escaperoutetype": [
+			{
+				"id": 10,
+				"name": "Vluchtroute",
+				"description": "Vluchtroute zonder bijzondere beveiliging",
+				"maximumStayInMinutes": 0
+			},
+			{
+				"id": 11,
+				"name": "Veilige vluchtroute breder dan 2 meter",
+				"description": "Veilige vluchtroute breder dan 2 meter",
+				"maximumStayInMinutes": 30
+			},
+			{
+				"id": 11,
+				"name": "Extra beveiligde vluchtroute",
+				"description": "Veilige vluchtroute breder of gelijk aan 2 meter",
+				"maximumStayInMinutes": 20
+			},
+			{
+				"id": 12,
+				"name": "Beveiligde vluchtroute deel van andere vluchtroute",
+				"description": "Extra veilige vluchtroute",
+				"maximumStayInMinutes": 15
+			}
+		],
+
+		"stairwelltype": [
+			{
+				"name": "Geen beveiligd trapenhuis",
+				"description": "Geen beveiligd trapenhuis",
+				"maximumEscapeTimeSpanMin": 3.5
+			},
+			{
+				"name": "Beveiligd trapenhuis",
+				"description": "Beveilid tegen brand en rook",
+				"maximumEscapeTimeSpanMin": 6
+			}
+		]
+	},
+	"door": {
+		"doortype": [
+			{
+				"name": "Dubble deur met een kleine hoek",
+				"description": "",
+				"CapacityPerMin": 90,
+				"SmallerThen135": true
+			},
+			{
+				"name": "Enkele deur met een kleine hoek.",
+				"description": "",
+				"CapacityPerMin": 110,
+				"SmallerThen135": true
+			},
+			{
+				"name": "Andere deuren",
+				"description": "",
+				"CapacityPerMin": 135,
+				"SmallerThen135": true
+			}
+		]
+	},
+	"stair": {
+		"stairsheighttype": [
+			{
+				"name": "Normale trap >: 1 meter",
+				"description": "",
+				"HeightMoreThan1M": true,
+				"CapacityPerMeter": 45
+			},
+			{
+				"name": "Lage trap < 1 meter",
+				"description": "",
+				"HeightMoreThan1M": false,
+				"CapacityPerMeter": 90
+			}
+		],
+
+		"stairscapacitytype": [
+			{
+				"name": "Minder breed dan 1,1 meter",
+				"description": "Minder breed of gelijk aan 1,1 meter",
+				"surfaceCapacity": 0.5,
+				"isStepCapacityPerMeter": false
+			},
+			{
+				"name": "Breder dan 1,1 meter",
+				"description": "Breder dan 1,1 meter",
+				"surfaceCapacity": 0.9,
+				"isStepCapacityPerMeter": true
+			}
+		]
+	},
+
+	"rules": {
+		"AreaEscapeCapacityPerMeterWidth": 90,
+		"timeStepsInSec": 30,
+		"heightDifferenceFloors": "between 2.1m and 4m",
+		"descentSpeedPerFloorInSec": 30,
+		"surfaceAreaCapacityPerSquareM": 4,
+		"maxAmountFiresPerIncident": 1,
+		"info1": "Er kan in elke SBC brand ontstaan",
+		"info2": "SurfaceCapacit and escapeCapacity of the SBC does not count",
+		"info3": "Bijeenkomst per oppervlag 2 pers per m2 als er > 200 en niet binnen 3.5 min kan verlaten",
+		"info4": "veld met hoeveel tredes toevoegen en trede diepte"
+	}
+}
